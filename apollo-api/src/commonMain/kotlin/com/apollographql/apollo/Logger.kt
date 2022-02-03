@@ -15,7 +15,7 @@ interface Logger {
   fun log(priority: Int, message: String, t: Throwable?, vararg args: Any)
 
   companion object {
-    const val DEBUG = 3
+    const val LOG_DEBUG = 3
     const val WARN = 5
     const val ERROR = 6
   }

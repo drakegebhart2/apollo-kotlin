@@ -1,17 +1,17 @@
 package com.apollographql.apollo.api.internal
 
 import com.apollographql.apollo.Logger
-import com.apollographql.apollo.Logger.Companion.DEBUG
+import com.apollographql.apollo.Logger.Companion.LOG_DEBUG
 import com.apollographql.apollo.Logger.Companion.ERROR
 import com.apollographql.apollo.Logger.Companion.WARN
 
 class ApolloLogger(val logger: Logger?) {
 
   fun d(message: String, vararg args: Any) =
-      log(DEBUG, message, null, *args)
+      log(LOG_DEBUG, message, null, *args)
 
   fun d(t: Throwable?, message: String, vararg args: Any) =
-      log(DEBUG, message, t, *args)
+      log(LOG_DEBUG, message, t, *args)
 
   fun w(message: String, vararg args: Any) =
       log(WARN, message, null, *args)
